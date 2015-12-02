@@ -1,6 +1,6 @@
 'use strict';
 var API_KEY = 'AIzaSyBZpOX2dCtVzLJgYz7i31wjLFJkgbzp5E0';
-var PUSH_SERVER_URL = 'http://127.0.0.1:8080/myveggies/app';
+var PUSH_SERVER_URL = 'http://127.0.0.1:8080/myveggies/';
 
 $(document).ready(function() {
     console.log( "I am a veggie push!" );
