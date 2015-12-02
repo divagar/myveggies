@@ -1,23 +1,23 @@
 {
     "veggies":
                 [
-                    {"name":"Brinjal", "desc":"brinjal", "price":"47"},
-                    {"name":"Broccoli", "desc":"broccoli", "price":"85"}, 
-                    {"name":"Cabbage", "desc":"cabbage", "price":"17"}, 
-                    {"name":"Capicom", "desc":"capicom", "price":"38"}, 
-                    {"name":"Carrot", "desc":"carrot", "price":"50"}, 
-                    {"name":"Cauliflower ", "desc":"cauliflower", "price":"60"}, 
-                    {"name":"Chilis", "desc":"chilis", "price":"30"},
+                    {"name":"Brinjal", "desc":"brinjal", "price":"55"},
+                    {"name":"Broccoli", "desc":"broccoli", "price":"80"},
+                    {"name":"Cabbage", "desc":"cabbage", "price":"19"},
+                    {"name":"Capicom", "desc":"capicom", "price":"40"},
+                    {"name":"Carrot", "desc":"carrot", "price":"60"},
+                    {"name":"Cauliflower ", "desc":"cauliflower", "price":"70"},
+                    {"name":"Chilis", "desc":"chilis", "price":"32"},
                     {"name":"Corn", "desc":"corn", "price":"12"},
-                    {"name":"Garlic", "desc":"garlic", "price":"180"}, 
-                    {"name":"Ladyfinger", "desc":"ladyfinger", "price":"46"}, 
-                    {"name":"CurryLeaf", "desc":"leaf", "price":"64"}, 
-                    {"name":"Mushroom", "desc":"mushroom", "price":"196"}, 
-                    {"name":"Onion", "desc":"onion", "price":"49"}, 
-                    {"name":"Peas", "desc":"peas", "price":"98"}, 
-                    {"name":"Potato", "desc":"potato", "price":"28"}, 
-                    {"name":"Pumpkin", "desc":"pumpkin", "price":"40"}, 
-                    {"name":"Radish", "desc":"radish", "price":"26"},
-                    {"name":"Tomato", "desc":"tomato", "price":"52"}
+                    {"name":"Garlic", "desc":"garlic", "price":"182"},
+                    {"name":"Ladyfinger", "desc":"ladyfinger", "price":"58"},
+                    {"name":"CurryLeaf", "desc":"leaf", "price":"62"},
+                    {"name":"Mushroom", "desc":"mushroom", "price":"196"},
+                    {"name":"Onion", "desc":"onion", "price":"38"},
+                    {"name":"Peas", "desc":"peas", "price":"144"},
+                    {"name":"Potato", "desc":"potato", "price":"28"},
+                    {"name":"Pumpkin", "desc":"pumpkin", "price":"12"},
+                    {"name":"Radish", "desc":"radish", "price":"28"},
+                    {"name":"Tomato", "desc":"tomato", "price":"36"}
                 ]
 }

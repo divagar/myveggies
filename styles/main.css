@@ -1,7 +1,11 @@
+body {
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
 .jumbotron {
   background-color: #67be78 !important;
-  padding-top: 25px !important;
-  padding-bottom: 20px !important;
+  padding-top: 10px !important;
+  padding-bottom: 0px !important;
 }
 
 h4 {
@@ -29,13 +33,14 @@ hr {
 
 .veggies-header h3 {
   text-align: center;
-  margin-top: 0px
+  margin-top: 0px;
+  font-size: 160% !important;
 }
 
 .veggies-header hr {
-  margin-top: 10px;
+  margin-top: 5px;
   margin-bottom: 10px;
-  width: 50%;
+  width: 55%;
 }
 
 .veggies-header h6 {
@@ -47,16 +52,20 @@ hr {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  max-width: 100%;
+  height:auto;
 }
 
-.veggies-content .price {
-  /*float: right;*/
+.veggies-header .price {
+  /*float: right;
   margin-top: -7%;
   margin-left: -5%;
   position: absolute;
   background: lightgray;
   padding: 2%;
-  border-radius: 10px;
+  border-radius: 10px;*/
+  font-size: 110%;
+  text-align: center;
 }
 
 
