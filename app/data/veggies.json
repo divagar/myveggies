@@ -1,0 +1,23 @@
+{
+    "veggies":
+                [
+                    {"name":"Brinjal", "desc":"brinjal", "price":"47"},
+                    {"name":"Broccoli", "desc":"broccoli", "price":"85"}, 
+                    {"name":"Cabbage", "desc":"cabbage", "price":"17"}, 
+                    {"name":"Capicom", "desc":"capicom", "price":"38"}, 
+                    {"name":"Carrot", "desc":"carrot", "price":"50"}, 
+                    {"name":"Cauliflower ", "desc":"cauliflower", "price":"60"}, 
+                    {"name":"Chilis", "desc":"chilis", "price":"30"},
+                    {"name":"Corn", "desc":"corn", "price":"12"},
+                    {"name":"Garlic", "desc":"garlic", "price":"180"}, 
+                    {"name":"Ladyfinger", "desc":"ladyfinger", "price":"46"}, 
+                    {"name":"CurryLeaf", "desc":"leaf", "price":"64"}, 
+                    {"name":"Mushroom", "desc":"mushroom", "price":"196"}, 
+                    {"name":"Onion", "desc":"onion", "price":"49"}, 
+                    {"name":"Peas", "desc":"peas", "price":"98"}, 
+                    {"name":"Potato", "desc":"potato", "price":"28"}, 
+                    {"name":"Pumpkin", "desc":"pumpkin", "price":"40"}, 
+                    {"name":"Radish", "desc":"radish", "price":"26"},
+                    {"name":"Tomato", "desc":"tomato", "price":"52"}
+                ]
+}

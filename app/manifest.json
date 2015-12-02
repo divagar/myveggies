@@ -1,0 +1,21 @@
+{
+  "name": "My Veggies",
+  "short_name": "My Veggies",
+  "icons": [{
+        "src": "images/icons/myveggies.png",
+        "sizes": "128x128"
+      }, {
+        "src": "images/icons/myveggies.png",
+        "sizes": "152x152"
+      }, {
+        "src": "images/icons/myveggies.png",
+        "sizes": "144x144"
+      }, {
+        "src": "images/icons/myveggies.png",
+        "sizes": "192x192"
+      }],
+  "start_url": "/myveggies/app/index.html",
+  "display": "standalone",
+  "gcm_sender_id": "499695832013",
+  "gcm_user_visible_only": true
+}

@@ -1,0 +1,14 @@
+{
+    "fruits":
+                [
+                    {"name":"Apple", "desc":"apple", "price":"52"},
+                    {"name":"Banana", "desc":"banana", "price":"62"},
+                    {"name":"Cherries", "desc":"cherries", "price":"72"},
+                    {"name":"Grapes", "desc":"grapes", "price":"82"},
+                    {"name":"Orange", "desc":"orange", "price":"92"},
+                    {"name":"Pear", "desc":"pear", "price":"102"},
+                    {"name":"Pineapple", "desc":"pineapple", "price":"112"},
+                    {"name":"Strawberry", "desc":"strawberry", "price":"122"},
+                    {"name":"Watermelon", "desc":"watermelon", "price":"132"}
+                ]
+}

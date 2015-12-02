@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "name": "My Veggies",
+  "launch_path": "/index.html",
+  "description": "Know the price of your veggies.",
+  "icons": {
+    "128": "/images/icons/myveggies.png"
+  },
+  "developer": {
+    "name": "",
+    "url": ""
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "en",
+  "permissions": {
+  },
+  "locales": {
+    "en": {
+      "name": "My Veggies",
+      "description": "Know the price of your veggies.."
+    }
+  }
+}
