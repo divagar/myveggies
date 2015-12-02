@@ -14,7 +14,7 @@
         "src": "images/icons/myveggies.png",
         "sizes": "192x192"
       }],
-  "start_url": "/myveggies/app/index.html",
+  "start_url": "index.html",
   "display": "standalone",
   "gcm_sender_id": "499695832013",
   "gcm_user_visible_only": true

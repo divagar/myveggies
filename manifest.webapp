@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "My Veggies",
-  "launch_path": "/index.html",
+  "launch_path": "index.html",
   "description": "Know the price of your veggies.",
   "icons": {
     "128": "/images/icons/myveggies.png"
