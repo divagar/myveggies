@@ -23,12 +23,16 @@ h4 {
   padding-bottom: 15px;
   border: 1px solid #ddd;
   border: 1px solid rgba(86,61,124,.2);
-  margin: 4px;
+  margin: 1px;
 }
 
-hr {
-  margin-top: 40px;
-  margin-bottom: 40px;
+.row-centered {
+   text-align:center;
+}
+
+.col-centered {
+  display: inline-block;
+  float: none;
 }
 
 .veggies-header h3 {
@@ -57,19 +61,20 @@ hr {
 }
 
 .veggies-header .price {
-  /*float: right;
-  margin-top: -7%;
-  margin-left: -5%;
-  position: absolute;
-  background: lightgray;
-  padding: 2%;
-  border-radius: 10px;*/
   font-size: 110%;
   text-align: center;
 }
 
+footer {
+  text-align: right;
+  padding-top: 15px;
+}
 
-/*checkbox*/
+footer .flaticon {
+  font-size: 12px;
+}
+
+/*checkbox push notification*/
 div.pushnotify {
   padding-bottom: 1%;
   /* disabling for now */

@@ -36,17 +36,17 @@ function getContent(name) {
 
 function createMainContent(name, data) {
    	$(".container .row").append(
-   			"<div class='col-xs-5 col-sm-3 col-md-3 col-lg-2'>"+
-   				"<div class='veggies-header'>"+
-	      			"<h3>"+data.name+"</h3>"+
-					"<h6>"+data.desc+"</h6>"+
-					"<div class='price' data-price='"+data.price+"'>. . .</div>"+
-					"<hr/>"+
-				"</div>"+
-				"<div class='veggies-content'>"+
-					"<img src='images/"+name+"/"+data.name+".png'>"+
-				"</div>"+
-			"</div>");
+   		"<div class='col-xs-5 col-sm-3 col-md-3 col-lg-2 col-centered'>"+
+   			"<div class='veggies-header'>"+
+   			"<h3>"+data.name+"</h3>"+
+				"<h6>"+data.desc+"</h6>"+
+				"<div class='price' data-price='"+data.price+"'>. . .</div>"+
+				"<hr/>"+
+			"</div>"+
+			"<div class='veggies-content'>"+
+				"<img src='images/"+name+"/"+data.name+".png'>"+
+			"</div>"+
+		"</div>");
 }
 
 function updatePrice() {
