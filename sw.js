@@ -26,20 +26,32 @@ self.addEventListener('fetch', function(event) {
     caches.match(event.request).then(function(response) {
         // Return from cache
         if (response) {
-          // fetch latest copy of json from network
-          if (String(event.request.url).indexOf("veggies.json") >= 0) {
+            //recache dynamic request
+            if (String(event.request.url).indexOf("json") >= 0) {
               fetch(event.request).then(function(networkResponse) {
                 caches.open(CACHE_NAME).then(function(cache) {
                   cache.put(event.request, networkResponse.clone());
                 });
               });
-          }
+            }
           return response;
         }
 
         // Cache new responses
         var fetchRequest = event.request.clone();
         return fetch(fetchRequest).then(function(response) {
+
+            //cache dynamic request
+            if (String(event.request.url).indexOf("json") >= 0 || 
+                  String(event.request.url).indexOf("fonts") >=0 ||
+                  String(event.request.url).indexOf("twitter") >=0  ) {
+              fetch(event.request).then(function(networkResponse) {
+                caches.open(CACHE_NAME).then(function(cache) {
+                  cache.put(event.request, networkResponse.clone());
+                });
+              });
+            }
+
             if(!response || response.status !== 200 || response.type !== 'basic') {
               return response;
             }

@@ -1,3 +1,5 @@
+var DOC_ID = '1rSGZGqy9_2usqOtqarTQSB0NHYZwTkyt6YlrRT3KHQU';
+
 $(document).ready(function() {
     console.log( "I am a veggie!" );
 
@@ -5,10 +7,7 @@ $(document).ready(function() {
     registerServiceworker();
 
     //get veggies
-    getContent('veggies');
-
-    //get fruits
-    getContent('fruits');
+    getContent();
 
 });
 
@@ -23,18 +22,23 @@ if ('serviceWorker' in navigator) {
 }
 }
 
-function getContent(name) {
-	$.getJSON("data/"+name+".json", function(result) {
-	    $.each(result[name], function(i, data) {
-	 		createMainContent(name, data);
-	    });
-	    updatePrice();
-	}).error(function(jqXHR, textStatus, errorThrown) {
+function getContent() {
+  var url = "https://spreadsheets.google.com/feeds/list/" + DOC_ID + "/od6/public/values?alt=json";
+  var myVeggies = {};
+  $.getJSON(url, function(result) {
+      $(result.feed.entry).each(function() {
+        myVeggies['name']  = this.gsx$name.$t;
+        myVeggies['desc']  = this.gsx$desc.$t;
+        myVeggies['price'] = this.gsx$price.$t;
+        createMainContent(myVeggies);
+      });
+      updatePrice();
+  }).error(function(jqXHR, textStatus, errorThrown) {
             console.log("error occurred in getting/parsing json!");
     });
 }
 
-function createMainContent(name, data) {
+function createMainContent(data) {
    	$(".container .row").append(
    		"<div class='col-xs-5 col-sm-3 col-md-3 col-lg-2 col-centered'>"+
    			"<div class='veggies-header'>"+
@@ -44,7 +48,7 @@ function createMainContent(name, data) {
 				"<hr/>"+
 			"</div>"+
 			"<div class='veggies-content'>"+
-				"<img src='images/"+name+"/"+data.name+".png'>"+
+				"<img src='images/veggies/"+data.name+".png'>"+
 			"</div>"+
 		"</div>");
 }
@@ -52,7 +56,6 @@ function createMainContent(name, data) {
 function updatePrice() {
 	$('div.veggies-header div.price').appear();
 	$('div.veggies-header div.price').on('appear', function() {
-		console.log($(this));
 		$(this)[0].innerText = "Rs. " + $(this).data('price');
     	$(this).off();
 	});
