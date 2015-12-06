@@ -27,10 +27,14 @@ function getContent() {
   var myVeggies = {};
   $.getJSON(url, function(result) {
       $(result.feed.entry).each(function() {
-        myVeggies['name']  = this.gsx$name.$t;
-        myVeggies['desc']  = this.gsx$desc.$t;
-        myVeggies['price'] = this.gsx$price.$t;
-        createMainContent(myVeggies);
+        if(this.content.$t != "") {
+          myVeggies['name']  = this.gsx$name.$t;
+          myVeggies['desc']  = this.gsx$desc.$t;
+          myVeggies['price'] = this.gsx$price.$t;
+          createMainContent(myVeggies);
+        }
+        else
+          $("div.updateTime")[0].innerText = "price updated on : " + new Date(this.gsx$id.$t);
       });
       updatePrice();
   }).error(function(jqXHR, textStatus, errorThrown) {
