@@ -23,48 +23,49 @@ self.addEventListener('activate', function(event) {
 self.addEventListener('fetch', function(event) {
   console.log("SW fetch");
   event.respondWith(
+    //check cache
     caches.match(event.request).then(function(response) {
+
+        // check the json response from n/w first and fallback to cache
+        var url = String(event.request.url);
+        var fetchRequest = event.request.clone();
+        if (url.indexOf("json") >= 0) {
+          return fetch(fetchRequest).then(function(networkResponse) {
+            cacheResponse(event.request, networkResponse.clone());
+            return networkResponse;
+          }).catch(function(){
+            return response;
+          });
+        }
         // Return from cache
         if (response) {
-            //recache dynamic request
-            if (String(event.request.url).indexOf("json") >= 0) {
-              fetch(event.request).then(function(networkResponse) {
-                caches.open(CACHE_NAME).then(function(cache) {
-                  cache.put(event.request, networkResponse.clone());
-                });
-              });
-            }
           return response;
         }
 
         // Cache new responses
-        var fetchRequest = event.request.clone();
         return fetch(fetchRequest).then(function(response) {
-
             //cache dynamic request
-            if (String(event.request.url).indexOf("json") >= 0 || 
-                  String(event.request.url).indexOf("fonts") >=0 ||
-                  String(event.request.url).indexOf("twitter") >=0  ) {
-              fetch(event.request).then(function(networkResponse) {
-                caches.open(CACHE_NAME).then(function(cache) {
-                  cache.put(event.request, networkResponse.clone());
-                });
-              });
+            if (url.indexOf("json") >= 0 || url.indexOf("fonts") >=0 ||
+                  url.indexOf("twitter") >=0  ) {
+                cacheResponse(event.request, response.clone());
+                return response;
             }
 
             if(!response || response.status !== 200 || response.type !== 'basic') {
               return response;
             }
-
-            var responseToCache = response.clone();
-            caches.open(CACHE_NAME).then(function(cache) {
-                cache.put(event.request, responseToCache);
-              });
+            cacheResponse(event.request, response.clone());
             return response;
         });
       })
     );
 });
+
+function cacheResponse(request, response) {
+  caches.open(CACHE_NAME).then(function(cache) {
+    cache.put(request, response);
+  });
+}
 
 self.addEventListener('push', function(event) {  
   console.log('Received a push message', event);
