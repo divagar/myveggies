@@ -7,7 +7,7 @@ $(document).ready(function() {
     registerServiceworker();
 
     //get veggies
-    getContent();
+    getContent('veggies');
 
 });
 
@@ -21,6 +21,23 @@ if ('serviceWorker' in navigator) {
   });
 }
 }
+
+function getContent(name) {
+  $.getJSON("data/"+name+".json", function(result) {
+      $.each(result[name], function(i, data) {
+      createMainContent(name, data);
+      });
+      updatePrice();
+      updatedTime = "Price updated on : " + result['updatedTime'];
+      $("div.updateTime")[0].innerText = updatedTime;
+  }).error(function(jqXHR, textStatus, errorThrown) {
+            console.log("error occurred in getting/parsing json!");
+    });
+}
+
+/*
+Commenting this flow till Cache api are natively available
+External api read is throwing error in SW
 
 function getContent() {
   var url = "https://spreadsheets.google.com/feeds/list/" + DOC_ID + "/od6/public/values?alt=json";
@@ -40,9 +57,9 @@ function getContent() {
   }).error(function(jqXHR, textStatus, errorThrown) {
             console.log("error occurred in getting/parsing json!");
     });
-}
+}*/
 
-function createMainContent(data) {
+function createMainContent(name, data) {
    	$(".container .row").append(
    		"<div class='col-xs-5 col-sm-3 col-md-3 col-lg-2 col-centered'>"+
    			"<div class='veggies-header'>"+
@@ -52,7 +69,7 @@ function createMainContent(data) {
 				"<hr/>"+
 			"</div>"+
 			"<div class='veggies-content'>"+
-				"<img src='images/veggies/"+data.name+".png'>"+
+				"<img src='images/"+name+"/"+data.name+".png'>"+
 			"</div>"+
 		"</div>");
 }

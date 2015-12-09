@@ -1,0 +1,33 @@
+{
+    "veggies":
+                [
+                    {"name":"Brinjal", "desc":"brinjal", "price":"68"},
+                    {"name":"Broccoli", "desc":"broccoli", "price":"80"},
+                    {"name":"Cabbage", "desc":"cabbage", "price":"22"},
+                    {"name":"Capsicum", "desc":"capsicum", "price":"50"},
+                    {"name":"Carrot", "desc":"carrot", "price":"64"},
+                    {"name":"Cauliflower", "desc":"cauliflower", "price":"70"},
+                    {"name":"Chilis", "desc":"chilis", "price":"45"},
+                    {"name":"Corn", "desc":"corn", "price":"12"},
+                    {"name":"Garlic", "desc":"garlic", "price":"188"},
+                    {"name":"Ladyfinger", "desc":"ladyfinger", "price":"60"},
+                    {"name":"CurryLeaf", "desc":"leaf", "price":"64"},
+                    {"name":"Mushroom", "desc":"mushroom", "price":"196"},
+                    {"name":"Onion", "desc":"onion", "price":"34"},
+                    {"name":"Peas", "desc":"peas", "price":"144"},
+                    {"name":"Potato", "desc":"potato", "price":"26"},
+                    {"name":"Pumpkin", "desc":"pumpkin", "price":"12"},
+                    {"name":"Radish", "desc":"radish", "price":"48"},
+                    {"name":"Tomato", "desc":"tomato", "price":"32"},
+                    {"name":"Apple", "desc":"apple", "price":"199"},
+                    {"name":"Banana", "desc":"banana", "price":"34"},
+                    {"name":"Cherries", "desc":"cherries", "price":"89"},
+                    {"name":"Grapes", "desc":"grapes", "price":"40"},
+                    {"name":"Orange", "desc":"orange", "price":"109"},
+                    {"name":"Pear", "desc":"pear", "price":"120"},
+                    {"name":"Pineapple", "desc":"pineapple", "price":"38"},
+                    {"name":"Strawberry", "desc":"strawberry", "price":"55"},
+                    {"name":"Watermelon", "desc":"watermelon", "price":"20"}
+                ],
+     "updatedTime": "Wed Dec 09 2015"
+}
