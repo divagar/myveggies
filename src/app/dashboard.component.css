@@ -1,0 +1,86 @@
+.page-heading {
+    padding: 60px 0;
+}
+.intro-header {
+    margin-bottom: 0px;
+}
+
+div.dashboardBlog {
+    margin-top: 50px;
+}
+div.alert {
+    margin-top: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+div.dashboardControl {
+    float: right;
+    margin-top: 10px;
+}
+div.dashboardControl .btn {
+    padding: 6px 12px;
+    border: 1px solid #eee;
+}
+div.dashboardBlog .btn {
+    float: right;
+    padding: 6px 12px;
+    background: white;
+    border: 1px solid #eee;
+}
+textarea {
+    border: none;
+}
+
+
+
+/* dropdown submenu starts */
+.dropdown-submenu {
+    position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+.dropdown-submenu.pull-left {
+    float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+/* dropdown submenu ends */
+
+.ng-valid:not(form)  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
