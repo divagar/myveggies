@@ -1,0 +1,28 @@
+<form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+  <div class="login jumbotron center-block">
+    <div class="input-group margin-bottom-sm">
+      <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+      <input class="form-control" type="text" #username placeholder="Username" formControlName="username">
+    </div>
+    <!--<small [hidden]="loginForm.controls.username.valid || (loginForm.controls.username.pristine)" class="text-danger">
+            Username is required.
+    </small>-->
+    <div class="input-group margin-bottom-sm">
+      <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+      <input class="form-control" type="password" #password placeholder="Password" formControlName="password">
+    </div>
+    <!--<small [hidden]="loginForm.controls.password.valid || (loginForm.controls.password.pristine)" class="text-danger">
+            Password is required.
+    </small>-->
+    <button type="submit" class="btn" [disabled]="!loginForm.valid">
+    <i class="fa fa-user" aria-hidden="true"></i>
+    Submit
+    </button>
+  </div>
+</form>
+
+<!-- alert start -->
+<div class="alert alert-{{loginAlertType}} alert-dismissible" *ngIf="loginAlert" role="alert">
+  <button type="button" class="close" (click)="closeAlert()"><span aria-hidden="true">&times;</span></button> {{loginAlertMsg}}
+</div>
+<!-- alert end -->

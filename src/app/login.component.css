@@ -1,0 +1,58 @@
+.page-heading {
+    padding: 60px 0;
+}
+.intro-header {
+    margin-bottom: 0px;
+}
+
+@media (min-width: 768px) {
+    .login {
+        width: 50% !important;
+    }
+    .alert {
+        width: 50% !important;
+    }
+}
+
+@media (min-width: 960px) {
+    .login {
+        width: 40% !important;
+    }
+    .alert {
+        width: 40% !important;
+    }
+}
+
+.jumbotron {
+    background-color: white;
+}
+.margin-bottom-sm {
+    margin-bottom: 5px !important;
+}
+.input-group-addon {
+    background: white;
+}
+.btn {
+    float: right;
+    padding: 6px 12px;
+    background: white;
+    border: 1px solid #eee;
+}
+.alert {
+    width: 60%;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 16px;
+}
+.login {
+    width: 60%;
+}
+
+.ng-valid:not(form)  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
