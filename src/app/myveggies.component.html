@@ -1,34 +1,47 @@
 <div class="jumbotron">
-    <div class="container">
-      <h1>My Veggies!</h1>
-      <p>Simple progressive web app to know your veggies/fruits price around Bangalore, India.</p>
-    </div>
-  </div>
-
-  <div class="pushnotify">
-    <span>Enable notifications</span>
-    <input type="checkbox" id="push_notify" /><label for="push_notify"></label>
-  </div>
   <div class="container">
-    <div class="row row-centered">
-      <!-- dynamic content -->
-    </div>
-    <div class="updateTime"></div>
-    <footer>
-      <div class='twitter_share'>
-        <a href="https://twitter.com/share" class="twitter-share-button" {count} data-text="Check out the simple progressive web app using service worker."
-          data-via="divp3" data-hashtags="serviceworker">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
-        <a href="https://twitter.com/divp3" class="twitter-follow-button" data-show-count="false">Follow @divp3</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-      </div>
-
-      <div class='flaticon'>
-        Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com"
-          title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>
-      </div>
-
-    </footer>
+    <h1>My Veggies!</h1>
+    <p>Simple progressive web app to know your veggies/fruits price around Bangalore, India.</p>
   </div>
-  <!-- /container -->
+</div>
+
+<router-outlet></router-outlet>
+
+<hr>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          <li>
+            <a href="https://twitter.com/divagar_m" target="_blank">
+              <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0);">
+              <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/divagar" target="_blank">
+              <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+            </a>
+          </li>
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; My Veggies 2016</p>
+      </div>
+    </div>
+  </div>
+</footer>
